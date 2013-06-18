@@ -2,7 +2,7 @@
 
 <% @list.each do |l| %>
     <p style="color: red">
-    <%= link_to "#{l.title}", todo_url(l)  %> 
+    <%=l.title%> 
     </p>
     <%= link_to "Edit todo", edit_todo_url(l) %> |   
     <%= link_to "Delete todo", todo_url(l), :method => :delete %>
