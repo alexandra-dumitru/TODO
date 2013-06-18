@@ -1,0 +1,14 @@
+<h1> TODO List </h1>
+
+<% @list.each do |l| %>
+    <p style="color: red">
+    <%= link_to "#{l.title}", todo_url(l)  %> 
+    </p>
+    <%= link_to "Edit todo", edit_todo_url(l) %> |   
+    <%= link_to "Delete todo", todo_url(l), :method => :delete %>
+
+<% end %>
+
+<br>
+
+<%= link_to "Add entry", new_todo_url %>
